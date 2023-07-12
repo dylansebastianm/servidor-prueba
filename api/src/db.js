@@ -38,7 +38,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 const { Movies, MoviesTop, Genres } = sequelize.models;
 
-// Aca vendrian las relaciones
+// Relaciones
 Movies.belongsToMany(Genres, {
   through: 'MovieGenres',
   foreignKey: 'movieId',
